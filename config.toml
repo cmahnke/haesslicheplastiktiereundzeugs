@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 baseURL = "http://example.org/"
 languageCode = "de"
 title = "My New Hugo Site"
 #disablePathToLower: true
+=======
+baseURL = "https://haesslicheplastiktiereundzeugs.projektemacher.org/"
+languageCode = "de"
+title = "Häßliche Plastiktiere und Zeugs"
+publishDir = "docs"
+canonifyurls = true
+languagecode = "de"
+defaultcontentlanguage = "de"
+disablePathToLower = true
+>>>>>>> origin/main
