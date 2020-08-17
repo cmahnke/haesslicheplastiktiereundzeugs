@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="{{ .Site.Language.Lang }}">
+    {{ if hasPrefix .Page.Name "404" }}
+        <meta http-equiv="refresh" content="15; URL={{ .Site.BaseURL }}">
+    {{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+    <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+
+    {{ if .Permalink }}
+       <base href="{{ .Permalink }}">
+     {{ end }}
+     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+     {{ if .Permalink }}
+       <link rel="canonical" href="{{ .Permalink }}">
+     {{ end }}
+
+     {{ $tumblrStyle := resources.Get "css/tumblr.css" }}
+     {{ $options := (dict "targetPath" "base.css" "outputStyle" "compressed") }}
+     {{ $ourTemplate := resources.Get "scss/base.scss" }}
+     {{ $ourStyle := $ourTemplate | resources.ExecuteAsTemplate "scss/base.scss" . | toCSS $options }}
+     {{ $style := slice $tumblrStyle $ourStyle | resources.Concat "css/concated.css" | minify | fingerprint }}
+     <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}">
+
+     <link rel="icon" href="{{ .Site.Params.favicon | default "/images/favicon.ico" | absURL }}">
+
+     {{ $class := "" }}
+     {{ if hasPrefix .Page.File.Path "about" }}
+         {{ $class = "about" }}
+     {{ end }}
+     {{ if .Params.metaPage }}
+         {{ $class = printf "%s %s" $class "meta" }}
+     {{ end }}
+     <body class="{{ $class }}">
+       <div id="page">
+         {{ partial "header.html" . }}
+
+         {{ block "content" . }}{{ end }}
+
+         {{ partial "footer.html" . }}
+       </div>
+   </body>
+ </html>

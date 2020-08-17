@@ -1,0 +1,14 @@
+<div id="head">
+  <h1><a href="/">{{ .Site.Title }}</a> <em>{text:Header slogan}</em></h1>
+
+      <div style="width: 540px; margin: 10px auto 0 auto; display: none; {block:HasPages}display: block;{/block:HasPages}{block:AskEnabled}display: block;{/block:AskEnabled}{block:SubmissionsEnabled}display: block;{/block:SubmissionsEnabled}">
+          {block:HasPages}
+          {block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;&nbsp;{/block:Pages}
+          {/block:HasPages}
+          {{ with .Site.Menus.main}}
+            {{ range sort . }}
+              <a class="navigation-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            {{ end }}
+          {{ end }}
+      </div>
+</div>

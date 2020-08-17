@@ -1,0 +1,23 @@
+{{ $pages := .Site.RegularPages }}
+{{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
+{{- range $paginator.Pages -}}
+
+  <div class="post">
+  <span class="permalink"><strong>{lang:Navigate}</strong></span>
+    <div class="realpost"><div>
+    {block:NextPage}<a href="{NextPage}" id="past">&laquo; {lang:To the past}</a>{/block:NextPage}
+    <span id="page">{lang:Page CurrentPage of TotalPages}</span>
+    {block:PreviousPage}<a href="{PreviousPage}" id="future">{lang:To the future} &raquo;</a>{/block:PreviousPage}
+    </div></div>
+  </div>
+{{ end }}
+{{ if or ($paginator.HasPrev) ($paginator.HasNext) -}}
+  <h2 class="pagination">
+    {{ if $paginator.HasPrev }}
+      <a id="future" href="{{ $paginator.Prev.URL }}">To the future</a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+      <a id="past" href="{{ $paginator.Next.URL }}">To the past</a>
+    {{ end }}
+  </h2>
+{{- end }}
