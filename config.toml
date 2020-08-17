@@ -6,3 +6,19 @@ canonifyurls = true
 languagecode = "de"
 defaultcontentlanguage = "de"
 disablePathToLower = true
+
+[menu]
+    [[menu.main]]
+        name = "Start"
+        weight = 1
+        url = "/"
+
+    [[menu.main]]
+        name = "Über"
+        weight = 2
+        url = "about/"
+
+    [[menu.main]]
+        name = "tags"
+        weight = 3
+        url = "tags/"

@@ -1,14 +1,12 @@
 <div class="post photo">
-  {block:Date}
   <span class="permalink">
-      <a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+      <a href="{{ .RelPermalink }}">{{- partial "date.html" (dict "date" .Date "language" $.Page.Language "months" $.Site.Data.months) -}}</a><br />
   </span>
-  {/block:Date}
   <div class="realpost"><div>
     {LinkOpenTag}
     <img src="{PhotoUrl-500}" alt="{PhotoAlt}"/>
     {LinkCloseTag}
-    {block:Caption}{Caption}{/block:Caption}
+    {{ .Content }}
   </div>
       {block:HasTags}
    {block:Tags}

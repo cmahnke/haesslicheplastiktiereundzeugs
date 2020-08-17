@@ -5,7 +5,7 @@ tags:
 title: verwandtschaft i
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/595814478/verwandtschaft-i
 ---
-{{< figure src="tumblr_l2dg6bJbns1qbfzcmo1_1280jpg" >}} 
+{{< figure src="tumblr_l2dg6bJbns1qbfzcmo1_1280.jpg" >}}
 
 Verwandtschaft I
 

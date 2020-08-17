@@ -28,8 +28,6 @@
      {{ $style := slice $tumblrStyle $ourStyle | resources.Concat "css/concated.css" | minify | fingerprint }}
      <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}">
 
-     <link rel="icon" href="{{ .Site.Params.favicon | default "/images/favicon.ico" | absURL }}">
-
      {{ $class := "" }}
      {{ if hasPrefix .Page.File.Path "about" }}
          {{ $class = "about" }}

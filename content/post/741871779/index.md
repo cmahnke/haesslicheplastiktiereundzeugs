@@ -6,4 +6,4 @@ tags:
 
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/741871779
 ---
-{{< figure src="tumblr_l4obm0nZ6b1qbfzcmo1_1280jpg" >}} 
+{{< figure src="tumblr_l4obm0nZ6b1qbfzcmo1_1280.jpg" >}}
