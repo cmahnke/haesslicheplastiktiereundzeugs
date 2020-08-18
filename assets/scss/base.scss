@@ -1,3 +1,9 @@
+body.meta {
+    .permalink {
+        visibility: hidden;
+    }
+}
+
 .realpost  {
     figure {
         margin: 0;
@@ -5,6 +11,10 @@
         img {
             width: 500px;
         }
+    }
+
+    h1 {
+        margin-bottom: 0.4rem;
     }
 }
 
@@ -16,6 +26,17 @@
 
 #last,.menu .navigation-link {
     padding-right: 1rem;
+}
+
+
+.tagcloud {
+    padding: .6rem;
+    line-height: initial;
+
+    .cloud-tag {
+        padding: .4rem;
+
+    }
 }
 
 @media only screen and (max-width: 768px) {

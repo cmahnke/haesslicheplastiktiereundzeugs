@@ -13,6 +13,10 @@ Die Idee basiert auf einem Comic von [Katz & Goldt](https://katzundgoldt.de/), d
 
 Meine anderen Blogs sind nun auf [Projektemacher.org](https://projektemacher.org/) verzeichnet.
 
+# Tags
+
+{{< tagcloud >}}
+
 # Kolophon
 Diese Seite wurde mit [Hugo](https://gohugo.io/) generiert. Das Theme basiert auf einem Tumbler Theme von <a href="http://dailymeh.tumblr.com/">Simen</a>
 
