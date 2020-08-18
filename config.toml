@@ -1,11 +1,12 @@
 baseURL = "https://haesslicheplastiktiereundzeugs.projektemacher.org/"
 languageCode = "de"
-title = "Häßliche Plastiktiere und Zeugs"
+title = "Hässliche Plastiktiere und Zeugs"
 publishDir = "docs"
 canonifyurls = true
 languagecode = "de"
 defaultcontentlanguage = "de"
 disablePathToLower = true
+rssLimit = 25
 
 [menu]
     [[menu.main]]
@@ -17,8 +18,3 @@ disablePathToLower = true
         name = "Über"
         weight = 2
         url = "about/"
-
-    [[menu.main]]
-        name = "tags"
-        weight = 3
-        url = "tags/"

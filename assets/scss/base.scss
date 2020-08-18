@@ -1,0 +1,39 @@
+.realpost  {
+    figure {
+        margin: 0;
+
+        img {
+            width: 500px;
+        }
+    }
+}
+
+.menu {
+    margin: 1rem auto 1em auto;
+    width: 540px;
+    display: block;
+}
+
+#last,.menu .navigation-link {
+    padding-right: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    span.permalink {
+        font-size: unset;
+        float: unset;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    div#main {
+        width: 80%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}

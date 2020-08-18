@@ -1,23 +1,23 @@
 {{ $pages := .Site.RegularPages }}
 {{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
 {{- range $paginator.Pages -}}
-
-  <div class="post">
-
-  <span class="permalink"><strong>      <a href="{{ .RelPermalink }}">{{- partial "date.html" (dict "date" .Date "language" $.Page.Language "months" $.Site.Data.months) -}}</a><br />
-</strong></span>
-    {{ .Content }}
-  </div>
+    {{ partial "page.html" . }}
 {{ end }}
 {{ if or ($paginator.HasPrev) ($paginator.HasNext) -}}
-  <div class="realpost"><div>
-    {{ if $paginator.HasNext }}
-      <a id="past" href="{{ $paginator.Next.URL }}">&laquo;To the past</a>
-    {{ end }}
-    <span id="page">{lang:Page CurrentPage of TotalPages}</span>
-    {{ if $paginator.HasPrev }}
-      <a id="future" href="{{ $paginator.Prev.URL }}">To the future&raquo;</a>
-    {{ end }}
-    </div></div>
-  </h2>
+  <div class="post">
+      <span class="permalink"><strong>Navigation</strong></span>
+      <div class="realpost">
+          <div>
+            {{ if $paginator.HasNext }}
+              <a id="past" href="{{ $paginator.Next.URL }}">&laquo;To the past</a>
+            {{ end }}
+            {{ $currentPage := $paginator.PageNumber }}
+            {{ $totalPages := $paginator.TotalPages }}
+            <span id="page">Seite {{ $currentPage }} von {{ $totalPages }}</span>
+            {{ if $paginator.HasPrev }}
+              <a id="future" href="{{ $paginator.Prev.URL }}">To the future&raquo;</a>
+            {{ end }}
+        </div>
+    </div>
+  </div>
 {{- end }}

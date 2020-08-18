@@ -1,13 +1,11 @@
 <div class="post last" id="it">
-<span class="permalink"><strong>{lang:About}</strong></span>
-  <div class="realpost" id="last"><div>
-  {Description}
-  <a href="{RSS}">{lang:Subscribe via RSS}</a>.
-  </div></div>
+    <span class="permalink"><strong>Über</strong></span>
+    <div class="realpost" id="last">
+        {{ partial "menu.html" . }} <a class="navigation-link" href="{{ .Scratch.Get "rssLink" }}">RSS</a>
+    </div>
 </div>
 <div id="foot">
   <ul id="bottom">
-    <li><a href="http://tumblr.com/">Tumblr</a></li>
-    <li>Theme by <a href="http://dailymeh.tumblr.com/">Simen</a></li>
+    <li>Theme based on work of <a href="http://dailymeh.tumblr.com/">Simen</a></li>
   </ul>
 </div>

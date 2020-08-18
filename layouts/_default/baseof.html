@@ -27,6 +27,13 @@
      {{ $ourStyle := $ourTemplate | resources.ExecuteAsTemplate "scss/base.scss" . | toCSS $options }}
      {{ $style := slice $tumblrStyle $ourStyle | resources.Concat "css/concated.css" | minify | fingerprint }}
      <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}">
+     {{ with .OutputFormats.Get "rss" -}}
+        {{ $.Scratch.Set "rssLink" .RelPermalink }}
+       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+     {{ end -}}
+
+     {{ hugo.Generator }}
+  </head>
 
      {{ $class := "" }}
      {{ if hasPrefix .Page.File.Path "about" }}
@@ -38,10 +45,10 @@
      <body class="{{ $class }}">
        <div id="page">
          {{ partial "header.html" . }}
-
-         {{ block "content" . }}{{ end }}
-
-         {{ partial "footer.html" . }}
+         <div id="main">
+             {{ block "content" . }}{{ end }}
+             {{ partial "footer.html" . }}
+         </div>
        </div>
    </body>
  </html>
