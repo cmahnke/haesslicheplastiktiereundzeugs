@@ -1,6 +1,21 @@
-<div class="post photo">
+{{ $class := "photo" }}
+{{ if .Params.metaPage }}
+    {{ $class = "meta" }}
+{{ end }}
+<div class="post {{ $class }}">
   <span class="permalink">
-      <a href="{{ .RelPermalink }}">{{- partial "date.html" (dict "date" .Date "language" $.Page.Language "months" $.Site.Data.months) -}}</a><br />
+      {{ if .Params.metaPage }}
+        &nbsp;
+      {{ else }}
+        <a href="{{ .RelPermalink }}">{{- partial "date.html" (dict "date" .Date "language" $.Page.Language "months" $.Site.Data.months) -}}</a><br />
+      {{ end }}
+      {{ if .Site.Params.linkTumblr }}
+          {{ if .Params.tumblr_url }}
+            <span class="tumblr-url">
+              <a href="{{ .Params.tumblr_url }}">Original auf Tumblr</a>
+            </span>
+          {{ end }}
+      {{ end }}
   </span>
   <div class="realpost"><div>
     {{ .Content }}

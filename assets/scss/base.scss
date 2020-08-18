@@ -28,7 +28,6 @@ body.meta {
     padding-right: 1rem;
 }
 
-
 .tagcloud {
     padding: .6rem;
     line-height: initial;
@@ -37,6 +36,12 @@ body.meta {
         padding: .4rem;
 
     }
+}
+
+.tumblr-url {
+	float: right;
+	text-align: right;
+	visibility: hidden;
 }
 
 @media only screen and (max-width: 768px) {

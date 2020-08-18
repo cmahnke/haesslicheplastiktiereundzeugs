@@ -33,5 +33,5 @@ hugo import jekyll --force --debug ../tmp/ .
 # Starting hugo
 
 ```
-/usr/local/bin/hugo server -D --debug --disableFastRender --renderToDisk
+/usr/local/bin/hugo server -D --debug --disableFastRender --renderToDisk --ignoreCache  --gc     
 ```

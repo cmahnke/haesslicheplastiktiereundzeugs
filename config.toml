@@ -8,6 +8,9 @@ defaultcontentlanguage = "de"
 disablePathToLower = true
 rssLimit = 25
 
+[params]
+    linkTumblr = true
+
 [menu]
     [[menu.main]]
         name = "Start"
