@@ -1,4 +1,4 @@
-{{ $pages := .Site.RegularPages }}
+{{ $pages := .Pages }}
 {{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
 {{- range $paginator.Pages -}}
     {{ partial "page.html" . }}
