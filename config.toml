@@ -10,6 +10,9 @@ rssLimit = 25
 
 [params]
     linkTumblr = true
+    author = "Christian Mahnke"
+    keywords = "Tierparaden, Stadtmöbel"
+    description = "Fotodokumentaion über Tierparaden"
 
 [menu]
     [[menu.main]]

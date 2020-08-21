@@ -9,6 +9,10 @@ metaPage: true
 "Hässliche Plastiktiere und Zeugs" ist / war mein erstes Blog Projekt.
 Die Idee basiert auf einem Comic von [Katz & Goldt](https://katzundgoldt.de/), der leider nicht mehr online zur Verfügung steht.
 
+# Tierparaden
+
+Wer mehr über Tierparaden wissen möchte, dem sei der [entsprechende Eintrag](https://de.wikipedia.org/wiki/Tierparaden) in der Wikipedia empfohlen.
+
 # Meine anderen Blogs
 
 Meine anderen Blogs sind nun auf [Projektemacher.org](https://projektemacher.org/) verzeichnet.
