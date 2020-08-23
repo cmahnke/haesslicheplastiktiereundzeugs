@@ -1,6 +1,16 @@
-Dia Präsentation
+Hässliche Plastiktiere und Zeugs
+=================================
 
-# Generate data
+# Setup for local (offine) development
+
+Run the following script to generate assets
+
+```
+./scripts/setup.sh
+```
+
+
+# Import data from Tumblr
 
 ## Setup Ruby on OS X using `brew`
 
