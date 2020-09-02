@@ -46,19 +46,54 @@ body.meta {
 
 @media only screen and (max-width: 768px) {
 
-    span.permalink {
-        font-size: unset;
-        float: unset;
-        display: block;
-        margin-bottom: 1rem;
-    }
+    #page {
+        box-sizing: border-box;
 
-    div#main {
-        width: 80%;
-        margin: 0 auto;
+        .permalink {
+            font-size: unset;
+            float: unset;
+            display: block;
+            margin-bottom: 1rem;
+        }
 
-        img {
-            width: 100%;
+        #main {
+            width: 80%;
+            margin: auto;
+
+            .realpost {
+                max-width: 100%;
+                width: 100%;
+
+                div {
+                    width: unset;
+                }
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+
+        }
+        #page {
+            width: unset;
+        }
+
+        #bottom {
+            display: none;
+        }
+
+        #head {
+            padding: 2rem;
+
+            .menu {
+                width: unset;
+            }
+
+            h1 {
+                width: 100%;
+            }
         }
     }
 
