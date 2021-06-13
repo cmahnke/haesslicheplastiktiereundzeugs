@@ -1,5 +1,5 @@
 ---
-date: "2010-05-21T20:43:00Z"
+date: 2010-05-21T20:43:00Z
 tags:
 - Link
 title: Übersicht

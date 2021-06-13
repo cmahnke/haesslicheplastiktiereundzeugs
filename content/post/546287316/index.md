@@ -1,5 +1,5 @@
 ---
-date: "2009-08-20T15:02:00Z"
+date: 2009-08-20T15:02:00Z
 tags:
 - Tier
 - Hardegsen

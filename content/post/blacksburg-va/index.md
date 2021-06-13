@@ -1,5 +1,5 @@
 ---
-date: "2011-03-14T09:57:00Z"
+date: 2011-03-14T09:57:00Z
 tags:
 - Link
 title: Blacksburg, VA

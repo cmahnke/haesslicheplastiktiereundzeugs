@@ -1,5 +1,5 @@
 ---
-date: "2011-03-13T15:10:00Z"
+date: 2011-03-13T15:10:00Z
 tags:
 - Tier
 - Braunschweig

@@ -1,5 +1,5 @@
 ---
-date: "2011-12-24T18:00:00Z"
+date: 2011-12-24T18:00:00Z
 tags:
 - Link
 title: Weihnachtsgeschenk

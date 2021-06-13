@@ -1,5 +1,5 @@
 ---
-date: "2010-05-15T17:18:29Z"
+date: 2010-05-15T17:18:29Z
 tags:
 - Klotz
 - Berlin

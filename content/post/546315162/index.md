@@ -1,5 +1,5 @@
 ---
-date: "2010-03-16T10:39:00Z"
+date: 2010-03-16T10:39:00Z
 tags:
 - Tier
 - Leipzig

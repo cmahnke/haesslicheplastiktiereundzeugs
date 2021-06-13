@@ -1,5 +1,5 @@
 ---
-date: "2010-05-13T20:33:00Z"
+date: 2010-05-13T20:33:00Z
 tags:
 - Berlin
 title: verwandtschaft ii

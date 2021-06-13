@@ -1,5 +1,5 @@
 ---
-date: "2011-10-10T12:37:00Z"
+date: 2011-10-10T12:37:00Z
 tags:
 - Tier
 - München Flughafen

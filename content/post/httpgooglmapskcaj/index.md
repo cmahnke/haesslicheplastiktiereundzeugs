@@ -1,5 +1,5 @@
 ---
-date: "2010-09-07T20:06:00Z"
+date: 2010-09-07T20:06:00Z
 tags:
 - Tier
 - Stockholm

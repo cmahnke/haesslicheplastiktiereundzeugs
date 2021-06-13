@@ -1,5 +1,5 @@
 ---
-date: "2011-12-16T13:45:00Z"
+date: 2011-12-16T13:45:00Z
 tags:
 - Innsbruck
 - Tier

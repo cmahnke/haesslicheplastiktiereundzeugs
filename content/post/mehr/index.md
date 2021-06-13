@@ -1,5 +1,5 @@
 ---
-date: "2010-05-13T19:28:00Z"
+date: 2010-05-13T19:28:00Z
 tags:
 - Link
 title: Mehr

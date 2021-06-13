@@ -1,5 +1,5 @@
 ---
-date: "2014-07-28T15:34:34Z"
+date: 2014-07-28T15:34:34Z
 tags: []
 title: http://www.comicgate.de/images/stories/rezensionen/lp_katz_02.gif
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/93109932642/der-erste-eintrag

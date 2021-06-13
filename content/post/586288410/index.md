@@ -1,5 +1,5 @@
 ---
-date: "2010-05-08T08:44:00Z"
+date: 2010-05-08T08:44:00Z
 tags:
 - Tier
 - Hannover

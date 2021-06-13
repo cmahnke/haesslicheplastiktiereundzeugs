@@ -1,5 +1,5 @@
 ---
-date: "2010-08-03T09:42:00Z"
+date: 2010-08-03T09:42:00Z
 tags:
 - Tier
 title: siehe auch london

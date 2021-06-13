@@ -1,5 +1,5 @@
 ---
-date: "2009-08-06T19:46:00Z"
+date: 2009-08-06T19:46:00Z
 tags:
 - Link
 title: Einleitung

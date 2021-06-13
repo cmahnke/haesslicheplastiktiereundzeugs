@@ -1,5 +1,5 @@
 ---
-date: "2011-12-27T16:05:00Z"
+date: 2011-12-27T16:05:00Z
 tags:
 - Bremerhaven
 - Tier
