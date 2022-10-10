@@ -2,6 +2,8 @@ public
 docs
 node_modules/
 resources
+.hugo_build.lock
+hugo_stats.json
 static/images/logo.png
 static/images/favicon*
 .hugo_build.lock
