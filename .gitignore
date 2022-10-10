@@ -4,4 +4,4 @@ node_modules/
 resources
 static/images/logo.png
 static/images/favicon*
-
+.hugo_build.lock
