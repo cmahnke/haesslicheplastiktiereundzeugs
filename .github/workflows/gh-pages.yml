@@ -28,6 +28,7 @@ jobs:
         with:
           hugo-version: '0.126.1'
           extended: true
+
       - name: Build Hugo site
         run: hugo --printI18nWarnings --printUnusedTemplates
 
