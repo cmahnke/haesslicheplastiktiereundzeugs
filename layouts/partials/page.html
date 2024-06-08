@@ -1,29 +1,30 @@
 {{ $class := "photo" }}
-{{ if .Params.metaPage }}
-    {{ $class = "meta" }}
-{{ end }}
+{{- if .Params.metaPage -}}
+  {{- $class = "meta" -}}
+{{- end -}}
 <div class="post {{ $class }}">
   <span class="permalink">
-      {{ if .Params.metaPage }}
-        &nbsp;
-      {{ else }}
+      {{- if not .Params.metaPage -}}
         <a href="{{ .RelPermalink }}">{{- partial "date.html" (dict "date" .Date "language" $.Page.Language "months" $.Site.Data.months) -}}</a><br />
-      {{ end }}
-      {{ if .Site.Params.linkTumblr }}
+      {{- end -}}
+      {{- if .Site.Params.linkTumblr -}}
           {{ if .Params.tumblr_url }}
             <span class="tumblr-url">
               <a href="{{ .Params.tumblr_url }}">Original auf Tumblr</a>
             </span>
-          {{ end }}
-      {{ end }}
+          {{- end -}}
+      {{- end -}}
   </span>
   <div class="realpost"><div>
     {{ .Content }}
   </div>
-    {{ if isset .Params "tags" }}
-        {{ range $tag := .Params.tags }}
-            <a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}" title="{{ $tag }}">{{ $tag }}</a>
-        {{ end }}
-    {{ end }}
+    {{- if isset .Params "tags" -}}
+    <div class="tags-heading">Tags</div>
+    <ul class="tags">
+      {{- range $tag := .Params.tags -}}
+        <li><a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}" title="{{ $tag }}">{{ $tag }}</a></li>
+      {{- end -}}
+    {{- end -}}
+    <ul>
   </div>
 </div>

@@ -1,0 +1,8 @@
+[params]
+    linkTumblr = true
+    author = "Christian Mahnke"
+    keywords = "Tierparaden, Stadtmöbel"
+    description = "Fotodokumentaion über Tierparaden"
+
+    [params.footer]
+        privacy = true

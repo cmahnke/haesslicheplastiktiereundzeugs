@@ -1,11 +1,12 @@
 <div class="post last" id="it">
-    <span class="permalink"><strong>Über</strong></span>
+    <span class="permalink"><strong>Menü</strong></span>
     <div class="realpost" id="last">
-        {{ partial "menu.html" . }} <a class="navigation-link" href="{{ .Scratch.Get "rssLink" }}">RSS</a>
+        {{- partial "menu.html" . -}} <a class="navigation-link" href="{{ .Scratch.Get "rssLink" }}">RSS</a>
     </div>
 </div>
 <div id="foot">
   <ul id="bottom">
     <li>Theme based on work of <a href="http://dailymeh.tumblr.com/">Simen</a></li>
   </ul>
+  {{- partialCached "footer-content.html" . -}}
 </div>

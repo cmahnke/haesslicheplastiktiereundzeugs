@@ -98,3 +98,35 @@ body.meta {
     }
 
 }
+
+.about.meta {
+    #main .post.meta {
+        margin-left: 130px;
+    }
+
+}
+
+.realpost {
+    .tags-heading {
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    .tags {
+        padding-inline-start: 0;
+        margin-inline-start: 40px;
+    }
+
+    .navigation-link {
+        margin-right: 1em;
+    }
+
+}
+
+#foot {
+    border-top: 2px solid black;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}

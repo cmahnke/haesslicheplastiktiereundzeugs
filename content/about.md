@@ -31,3 +31,7 @@ Das [Einbinden der Bilder](https://gitlab.com/kaushalmodi/hugo-theme-refined/blo
 "Hässliche Plastiktiere und Zeugs" ist ein [Projekt](https://projektemacher.org) von **Christian Mahnke**.
 
 Kontakt ist via [E-Mail](mailto:haesslicheplastiktiereundzeugs@projektemacher.org) möglich.
+
+# Datenschutzerklärung
+
+Die Datenschutzerklärung ist [hier](/privacy) verfügbar.
