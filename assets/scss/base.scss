@@ -129,4 +129,11 @@ body.meta {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    width: 100% !important;
+
+    img {
+      display: inline;
+      margin-bottom: unset;
+      vertical-align: sub;
+    }
 }
