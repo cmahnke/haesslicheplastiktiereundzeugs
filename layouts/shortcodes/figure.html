@@ -1,41 +1,55 @@
-{{/* Taken from https://gitlab.com/kaushalmodi/hugo-theme-refined/blob/master/layouts/shortcodes/figure.html */}}
-<!-- https://github.com/gohugoio/hugo/issues/4406 -->
-<!-- https://github.com/gohugoio/hugo/issues/4562 -->
-{{ $image := .Get "src" }}
+{{- $defaultWidth := 500 -}}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-    {{ if .Get "link"}}<a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>{{ end }}
-        {{ if (findRE "(^|:)//" $image) -}} <!-- If image link is a URL with protocol or two leading slashes, use just that unmodified. -->
-            <img src="{{ $image }}"
-        {{- else if (findRE "^/" $image) -}} <!-- If image link has one leading slash -->
-            {{- /* Cannot use absURL below because it doesn't work as expected if baseURL has a subdir. */ -}}
-            {{- $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" -}}
-            <img src="{{ (printf "%s%s" $baseurl_no_trailing_slash $image) }}"
-        {{- else -}}
-            {{- /* Below variable will always have a trailing slash, even with uglyURLs enabled. */ -}}
-            {{- $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" -}}
-            <img src="{{ (printf "%s%s" $permalink_pretty $image) }}"
+  {{- if .Get "link" -}}
+    <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+  {{- end -}}
+
+  {{- $u := urls.Parse (.Get "src") -}}
+  {{- $src := $u.String -}}
+  {{- if not $u.IsAbs -}}
+    {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
+      {{- $orientation := 1 -}}
+      {{- $rotateOpts := "" -}}
+      {{- with .Exif -}}
+        {{- $orientation = .Tags.Orientation -}}
+      {{- end -}}
+      {{- if (eq $orientation 8) -}}
+        {{- $rotateOpts = "r90" -}}
+      {{- else if (eq $orientation 6) -}}
+          {{- $rotateOpts = "r270" -}}
+      {{- end -}}
+      {{- if eq .MediaType.SubType "jpeg" -}}
+        {{- with .Resize (printf "%dx webp %s" $defaultWidth $rotateOpts) -}}
+          {{- $src = .RelPermalink -}}
         {{- end -}}
-            {{- if (or (.Get "alt") (.Get "caption")) -}}
-                {{- with .Get "alt"}}
-                    {{- printf " alt=\"%s\"" . | safeHTMLAttr -}}
-                {{- else -}}
-                    {{- printf " alt=\"%s\"" (.Get "caption" | markdownify | plainify) | safeHTMLAttr -}}
-                {{- end -}}
-            {{- end -}}
-            {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-            {{- with .Get "height" }} height="{{ . }}"{{ end -}}/> <!-- Closing img tag -->
-        {{- if .Get "link" }}</a>{{ end -}}
-        {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-            <figcaption>
-                {{ with (.Get "title") }}
-                    <h4>{{ . }}</h4>
-                {{ end }}
-                {{ if (or (.Get "caption") (.Get "attr")) }}<p>
-                    {{ .Get "caption" | markdownify }}
-                    {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
-                        {{ .Get "attr" | markdownify }}
-                        {{ if .Get "attrlink" }}</a>{{ end }}</p>
-                {{ end }}
-            </figcaption>
+      {{- else -}}
+        {{- $src = .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  <img src="{{ $src }}"
+    {{- if or (.Get "alt") (.Get "caption") }}
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+    {{- end -}}
+    {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+  ><!-- Closing img tag -->
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+    <figcaption>
+      {{ with (.Get "title") -}}
+        <h4>{{ . }}</h4>
+      {{- end -}}
+      {{- if or (.Get "caption") (.Get "attr") -}}<p>
+        {{- .Get "caption" | markdownify -}}
+        {{- with .Get "attrlink" }}
+          <a href="{{ . }}">
         {{- end -}}
+        {{- .Get "attr" | markdownify -}}
+        {{- if .Get "attrlink" }}</a>{{ end }}</p>
+      {{- end }}
+    </figcaption>
+  {{- end }}
 </figure>
