@@ -1,4 +1,5 @@
 {{/* See https://pfischbeck.de/en/posts/multilingual-dates-in-hugo/ */}}
+{{ warnf "[partials/date.html] TODO: Remove date.html" }}
 {{- if eq "de" .language.Lang -}}
   {{- .date.Day }}. {{ index .months (printf "%d" .date.Month) }} {{ .date.Year -}}
 {{- else -}}
