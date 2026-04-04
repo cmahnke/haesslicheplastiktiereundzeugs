@@ -5,7 +5,9 @@
 <div class="post {{ $class }}">
   <span class="permalink">
       {{- if not .Params.metaPage -}}
-        <a href="{{ .RelPermalink }}">{{- partial "date.html" (dict "date" .Date "language" $.Page.Language "months" hugo.Data.months) -}}</a><br />
+        <a href="{{ .RelPermalink }}"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{- .Date | time.Format ":date_full" -}}
+        </time></a><br />
       {{- end -}}
       {{- if .Site.Params.linkTumblr -}}
           {{ if .Params.tumblr_url }}
