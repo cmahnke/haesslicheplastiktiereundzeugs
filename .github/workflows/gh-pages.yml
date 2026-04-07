@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Hugo
         run: |
-          ./scripts/github/setup-hugo.sh ${{ env.HUGO_VERSION }}
+          ./themes/projektemacher-base/scripts/github/setup-hugo.sh ${{ env.HUGO_VERSION }}
 
       - name: Generate stats
         run: |
