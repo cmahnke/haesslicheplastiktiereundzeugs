@@ -12,3 +12,6 @@ updates:
     cooldown:
       exclude:
         - projektemacher-base
+    cooldown:
+      exclude:
+        - projektemacher-base
