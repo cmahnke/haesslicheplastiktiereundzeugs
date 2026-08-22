@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+set -e -o pipefail
 
 # NPM dependencies
 #yarn install
 
-set -e
 
 $PWD/themes/projektemacher-base/scripts/init/i18n.sh
