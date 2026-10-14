@@ -2,6 +2,7 @@
     linkTumblr = true
     keywords = "Tierparaden, Stadtmöbel"
     description = "Fotodokumentaion über Tierparaden"
+    schemaPerson = "https://christianmahnke.de/person.jsonld"
 
     [params.footer]
         privacy = true
