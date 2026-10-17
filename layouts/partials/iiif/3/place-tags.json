@@ -1,0 +1,14 @@
+{{- /*
+    Returns the terms of the 'tags' taxonomy whose term page is flagged with
+    'place: true' (content/tags/<term>/_index.md). Terms are returned urlized,
+    so callers can compare them against urlized front matter tag values.
+*/}}
+{{- $placeTerms := slice -}}
+{{- range $term, $entry := site.Taxonomies.tags -}}
+  {{- with $entry.Page -}}
+    {{- if .Params.place -}}
+      {{- $placeTerms = $placeTerms | append ($term | urlize) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $placeTerms -}}

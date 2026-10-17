@@ -1,0 +1,24 @@
+{{- /*
+    Returns the label for a page: the page title if set, otherwise all of the
+    page's tags whose term page is flagged 'place: true' (see place-tags.json),
+    joined with ", " in front matter order. Returns an empty string when there
+    is no title and no place tags — callers fall back to their default.
+*/}}
+{{- $label := "" -}}
+{{- with .Title -}}
+  {{- $label = . -}}
+{{- else -}}
+  {{- $placeTerms := partialCached "iiif/3/place-tags.json" "place-tags" -}}
+  {{- $places := slice -}}
+  {{- with .Params.tags -}}
+    {{- range $tag := . -}}
+      {{- if in $placeTerms ($tag | urlize) -}}
+        {{- $places = $places | append $tag -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt (len $places) 0 -}}
+    {{- $label = delimit $places ", " -}}
+  {{- end -}}
+{{- end -}}
+{{- return $label -}}

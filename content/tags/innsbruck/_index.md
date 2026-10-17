@@ -1,0 +1,4 @@
+---
+title: Innsbruck
+place: true
+---

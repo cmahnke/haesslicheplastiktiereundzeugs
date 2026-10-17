@@ -1,0 +1,15 @@
+{{- /*
+    Site override of the theme's manifest label: unlabeled pages fall back to
+    their place tags (see place-label.json).
+*/}}
+{{- $labelText := partial "iiif/3/place-label.json" . -}}
+{{- $label := dict $.Site.Language.Lang (slice $labelText) -}}
+{{- if hugo.IsMultilingual -}}
+  {{- $translations := where .Translations ".Lang" "!=" $.Site.Language.Lang -}}
+  {{- range $translations -}}
+    {{- $translationLabel := partial "iiif/3/place-label.json" . -}}
+    {{- $label = $label | merge (dict .Lang (slice $translationLabel)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{ return $label}}
