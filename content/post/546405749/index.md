@@ -4,5 +4,11 @@ tags:
 - Zeug
 
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/546405749
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_l1ehsl35uQ1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_l1ehsl35uQ1qbfzcmo1_1280.jpg" >}}

@@ -5,5 +5,11 @@ tags:
 - Berlin
 
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/593549900
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_l2bxawxiZW1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_l2bxawxiZW1qbfzcmo1_1280.jpg" >}}

@@ -8,3 +8,5 @@ static/images/logo.png
 static/images/favicon*
 .hugo_build.lock
 data/stats.json
+content/**/ogPreview.*
+content/**/ogPreview-tmp*

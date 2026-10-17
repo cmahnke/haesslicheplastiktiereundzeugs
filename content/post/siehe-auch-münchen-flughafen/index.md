@@ -5,6 +5,12 @@ tags:
 - Tier
 title: "Werbung (Siehe auch München Flughafen)"
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/14968321898/siehe-auch-m%C3%BCnchen-flughafen
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_lwylmq5W6q1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_lwylmq5W6q1qbfzcmo1_1280.jpg" >}}
 

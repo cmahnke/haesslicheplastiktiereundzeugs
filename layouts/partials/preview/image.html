@@ -1,0 +1,13 @@
+{{/*
+    Site OG preview lookup.
+    The generated preview files carry the site's default language suffix
+    (ogPreview.de.png, see scripts/preview.sh + theme's preview.py), so the
+    language is always part of the file name — unlike the theme's
+    prerendered.html, which only adds it for secondary sites.
+*/}}
+{{- $previewImg := "" -}}
+{{- if isset .context.Site.Params "preview" -}}
+    {{- $previewImgPrefix := printf "%s.%s%s" .context.Site.Params.preview.outputPrefix .context.Site.Language.Lang .context.Site.Params.preview.outputSuffix -}}
+    {{- $previewImg = (.context.Resources.ByType "image").GetMatch $previewImgPrefix -}}
+{{- end -}}
+{{- return $previewImg -}}

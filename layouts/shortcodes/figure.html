@@ -28,10 +28,15 @@
     {{- end -}}
   {{- end -}}
 
+  {{- $alt := "" -}}
+  {{- with .Get "alt" -}}
+    {{- $alt = . -}}
+  {{- else -}}{{- with .Get "caption" -}}
+    {{- $alt = . | markdownify | plainify -}}
+  {{- end -}}{{- end -}}
+
   <img src="{{ $src }}"
-    {{- if or (.Get "alt") (.Get "caption") }}
-    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
-    {{- end -}}
+    alt="{{ $alt }}"
     {{- with .Get "width" }} width="{{ . }}"{{ end -}}
     {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}

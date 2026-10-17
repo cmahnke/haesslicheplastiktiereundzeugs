@@ -5,5 +5,11 @@ tags:
 - Tier
 
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/14968367823
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_lwylqso6md1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_lwylqso6md1qbfzcmo1_1280.jpg" >}}

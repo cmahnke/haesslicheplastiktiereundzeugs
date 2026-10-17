@@ -6,5 +6,11 @@ tags:
 - München
 
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/14924931593
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_lwxdkhAwkJ1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_lwxdkhAwkJ1qbfzcmo1_1280.jpg" >}}

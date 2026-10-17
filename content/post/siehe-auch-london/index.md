@@ -4,6 +4,12 @@ title: Siehe auch London
 tags:
 - Tier
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/3858625276/siehe-auch-london
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_li291wliwF1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_li291wliwF1qbfzcmo1_1280.jpg" >}}
 

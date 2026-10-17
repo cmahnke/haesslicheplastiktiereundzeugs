@@ -5,6 +5,12 @@ tags:
 - Tier
 title: Zwillinge
 tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/14923782527/man-beachte-die-seriennummer-es-sind-zwei-sehr
+outputs:
+- html
+- iiif-manifest
+resources:
+- src: "tumblr_lwxcd10gGN1qbfzcmo1_1280.jpg"
+  name: front
 ---
 {{< figure src="tumblr_lwxcd10gGN1qbfzcmo1_1280.jpg" >}}
 

@@ -44,6 +44,25 @@ theme = "projektemacher-base"
         autoHeadingID = true
         autoHeadingIDType = "github"
 
+[mediaTypes."application/ld+json"]
+    suffixes = ["json"]
+
+[outputFormats.iiif-manifest]
+    mediaType = "application/ld+json"
+    baseName = "manifest"
+    isPlainText = true
+    isHTML = false
+
+[outputFormats.iiif-collection]
+    mediaType = "application/ld+json"
+    baseName = "collection"
+    isPlainText = true
+    isHTML = false
+
+[outputs]
+    home = ["html", "rss", "iiif-collection"]
+    term = ["html", "rss", "iiif-collection"]
+
 [menu]
     [[menu.main]]
         name = "Start"
