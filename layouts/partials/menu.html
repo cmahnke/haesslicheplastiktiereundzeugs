@@ -1,4 +1,4 @@
-{{- with .Site.Menus.main -}}
+{{- with site.Menus.main -}}
   {{- range sort . -}}
     <a class="navigation-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
   {{- end -}}

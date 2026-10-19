@@ -9,7 +9,7 @@
           {{- .Date | time.Format ":date_full" -}}
         </time></a><br />
       {{- end -}}
-      {{- if .Site.Params.linkTumblr -}}
+      {{- if site.Params.linkTumblr -}}
           {{ if .Params.tumblr_url }}
             <span class="tumblr-url">
               <a href="{{ .Params.tumblr_url }}">Original auf Tumblr</a>

@@ -1,7 +1,7 @@
 <div class="post last" id="it">
     <span class="permalink"><strong>Menü</strong></span>
     <div class="realpost" id="last">
-        {{- partial "menu.html" . -}} <a class="navigation-link" href="{{ .Scratch.Get "rssLink" }}">RSS</a>
+        {{- partial "menu.html" . -}}{{- $rssLink := "" -}}{{- with .OutputFormats.Get "rss" -}}{{- $rssLink = .RelPermalink -}}{{- end -}} <a class="navigation-link" href="{{ $rssLink }}">RSS</a>
     </div>
 </div>
 <div id="foot">

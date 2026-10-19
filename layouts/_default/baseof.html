@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="{{ site.Language.Lang }}">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="{{ .Site.Language.Lang }}">
+    <meta http-equiv="Content-Language" content="{{ site.Language.Lang }}">
     {{ if hasPrefix .Page.Name "404" }}
-        <meta http-equiv="refresh" content="15; URL={{ .Site.BaseURL }}">
+        <meta http-equiv="refresh" content="15; URL={{ site.BaseURL }}">
     {{ end }}
-    {{ with .Site.Params.author.name }}<meta name="author" content="{{ . }}">{{ end }}
-    <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
-    <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+    {{ with site.Params.author.name }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="description" content="{{ .Description | default (.Summary | default site.Params.description ) }}">
+    <meta name="keywords" content="{{ (delimit .Keywords ",") | default site.Params.keywords }}">
 
     {{ partialCached "html/head/build-time.html" . }}
 
     {{ if .Permalink }}
        <base href="{{ .Permalink }}">
      {{ end }}
-     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+     <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
 
      {{ if .Permalink }}
        <link rel="canonical" href="{{ .Permalink }}">
@@ -30,8 +30,7 @@
      {{ $style := slice $tumblrStyle $ourStyle | resources.Concat "css/concated.css" | minify | fingerprint }}
      <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}">
      {{ with .OutputFormats.Get "rss" -}}
-        {{ $.Scratch.Set "rssLink" .RelPermalink }}
-       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
      {{ end -}}
 
      {{ hugo.Generator }}

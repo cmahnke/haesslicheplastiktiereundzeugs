@@ -3,9 +3,9 @@
     their place tags (see place-label.json).
 */}}
 {{- $labelText := partial "iiif/3/place-label.json" . -}}
-{{- $label := dict $.Site.Language.Lang (slice $labelText) -}}
+{{- $label := dict site.Language.Lang (slice $labelText) -}}
 {{- if hugo.IsMultilingual -}}
-  {{- $translations := where .Translations ".Lang" "!=" $.Site.Language.Lang -}}
+  {{- $translations := where .Translations ".Lang" "!=" site.Language.Lang -}}
   {{- range $translations -}}
     {{- $translationLabel := partial "iiif/3/place-label.json" . -}}
     {{- $label = $label | merge (dict .Lang (slice $translationLabel)) -}}

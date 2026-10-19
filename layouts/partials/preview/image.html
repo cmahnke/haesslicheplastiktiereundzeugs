@@ -6,8 +6,8 @@
     prerendered.html, which only adds it for secondary sites.
 */}}
 {{- $previewImg := "" -}}
-{{- if isset .context.Site.Params "preview" -}}
-    {{- $previewImgPrefix := printf "%s.%s%s" .context.Site.Params.preview.outputPrefix .context.Site.Language.Lang .context.Site.Params.preview.outputSuffix -}}
+{{- if isset site.Params "preview" -}}
+    {{- $previewImgPrefix := printf "%s.%s%s" site.Params.preview.outputPrefix site.Language.Lang site.Params.preview.outputSuffix -}}
     {{- $previewImg = (.context.Resources.ByType "image").GetMatch $previewImgPrefix -}}
 {{- end -}}
 {{- return $previewImg -}}
