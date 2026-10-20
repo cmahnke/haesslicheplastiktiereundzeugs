@@ -10,3 +10,11 @@ static/images/favicon*
 data/stats.json
 content/**/ogPreview.*
 content/**/ogPreview-tmp*
+
+/package-lock.json
+
+/npm-shrinkwrap.json
+
+/pnpm-lock.yaml
+
+/yarn.lock
