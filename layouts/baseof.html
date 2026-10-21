@@ -46,10 +46,11 @@
      {{ if .Params.metaPage }}
          {{ $class = printf "%s %s" $class "meta" }}
      {{ end }}
-     <body class="{{ $class }}">
-       <div id="page">
-         {{ partial "header.html" . }}
-         <div id="main">
+    <body class="{{ $class }}">
+      <a class="skip-link" href="#main">{{ i18n "skipToContent" }}</a>
+      <div id="page">
+        {{ partial "header.html" . }}
+        <div id="main">
              {{ block "content" . }}{{ end }}
              {{ partial "footer.html" . }}
          </div>
