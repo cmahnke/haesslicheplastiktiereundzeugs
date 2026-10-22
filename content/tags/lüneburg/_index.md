@@ -1,4 +1,5 @@
 ---
 title: Lüneburg
-place: true
+params:
+  place: true
 ---

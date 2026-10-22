@@ -4,12 +4,13 @@ tags:
 - Tier
 - London
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/936436914
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_l6zeu8XXjn1qbfzcmo1_r1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/936436914
 ---
 {{< figure src="tumblr_l6zeu8XXjn1qbfzcmo1_r1_1280.jpg" >}}

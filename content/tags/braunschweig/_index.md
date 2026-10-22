@@ -1,4 +1,5 @@
 ---
 title: Braunschweig
-place: true
+params:
+  place: true
 ---

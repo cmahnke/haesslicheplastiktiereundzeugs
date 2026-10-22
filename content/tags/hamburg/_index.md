@@ -1,4 +1,5 @@
 ---
 title: Hamburg
-place: true
+params:
+  place: true
 ---

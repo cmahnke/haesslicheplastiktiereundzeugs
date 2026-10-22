@@ -3,7 +3,7 @@
 set -e -o pipefail
 
 # NPM dependencies
-#yarn install
+#npm install
 
 # Generated theme assets (fonts, merged i18n, …)
 # This site has no maps and no npm package.json, so map styles and the

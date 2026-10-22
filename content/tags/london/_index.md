@@ -1,4 +1,5 @@
 ---
 title: London
-place: true
+params:
+  place: true
 ---

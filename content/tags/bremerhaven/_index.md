@@ -1,4 +1,5 @@
 ---
 title: Bremerhaven
-place: true
+params:
+  place: true
 ---

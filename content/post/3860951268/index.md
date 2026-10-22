@@ -4,12 +4,13 @@ tags:
 - Tier
 - Braunschweig
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/3860951268
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_li2epcPlEE1qbfzcmo1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/3860951268
 ---
 {{< figure src="tumblr_li2epcPlEE1qbfzcmo1_1280.jpg" >}}

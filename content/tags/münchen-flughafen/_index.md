@@ -1,4 +1,5 @@
 ---
 title: München Flughafen
-place: true
+params:
+  place: true
 ---

@@ -1,4 +1,5 @@
 ---
 title: Berlin
-place: true
+params:
+  place: true
 ---

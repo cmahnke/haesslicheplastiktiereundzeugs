@@ -4,12 +4,13 @@ tags:
 - Tier
 - Lüneburg
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/628830923
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_l2xv4hgsTy1qbfzcmo1_r1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/628830923
 ---
 {{< figure src="tumblr_l2xv4hgsTy1qbfzcmo1_r1_1280.jpg" >}}

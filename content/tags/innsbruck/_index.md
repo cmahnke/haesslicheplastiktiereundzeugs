@@ -1,4 +1,5 @@
 ---
 title: Innsbruck
-place: true
+params:
+  place: true
 ---

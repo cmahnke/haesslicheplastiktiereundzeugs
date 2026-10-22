@@ -4,12 +4,13 @@ tags:
 - Tier
 - Hannover
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/546307834
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_l1ef6qso4B1qbfzcmo1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/546307834
 ---
 {{< figure src="tumblr_l1ef6qso4B1qbfzcmo1_1280.jpg" >}}

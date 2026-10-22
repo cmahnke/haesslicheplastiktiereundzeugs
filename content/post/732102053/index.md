@@ -4,12 +4,13 @@ tags:
 - Tier
 - Berlin
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/732102053
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_l4jc5jFY5d1qbfzcmo1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/732102053
 ---
 {{< figure src="tumblr_l4jc5jFY5d1qbfzcmo1_1280.jpg" >}}

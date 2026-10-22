@@ -2,8 +2,9 @@
 title: Über dieses Blog
 slug: about
 date: 2020-08-17T22:18:09+02:00
-displayInList: false
-metaPage: true
+params:
+  displayInList: false
+  metaPage: true
 ---
 
 "Hässliche Plastiktiere und Zeugs" ist / war mein erstes Blog Projekt.

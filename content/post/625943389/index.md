@@ -4,12 +4,13 @@ tags:
 - Hardegsen
 - Tier
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/625943389
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_l2w42xEztu1qbfzcmo1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/625943389
 ---
 {{< figure src="tumblr_l2w42xEztu1qbfzcmo1_1280.jpg" >}}

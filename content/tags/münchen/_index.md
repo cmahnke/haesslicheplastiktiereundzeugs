@@ -1,4 +1,5 @@
 ---
 title: München
-place: true
+params:
+  place: true
 ---

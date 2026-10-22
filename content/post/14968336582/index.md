@@ -4,12 +4,13 @@ tags:
 - Bremerhaven
 - Tier
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/14968336582
 outputs:
 - html
 - iiif-manifest
 resources:
 - src: "tumblr_lwylo0hanB1qbfzcmo1_1280.jpg"
   name: front
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/14968336582
 ---
 {{< figure src="tumblr_lwylo0hanB1qbfzcmo1_1280.jpg" >}}

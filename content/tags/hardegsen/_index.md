@@ -1,4 +1,5 @@
 ---
 title: Hardegsen
-place: true
+params:
+  place: true
 ---

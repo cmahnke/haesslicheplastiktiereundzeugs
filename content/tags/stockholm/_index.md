@@ -1,4 +1,5 @@
 ---
 title: Stockholm
-place: true
+params:
+  place: true
 ---

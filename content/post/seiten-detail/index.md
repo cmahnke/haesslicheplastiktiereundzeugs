@@ -4,7 +4,8 @@ tags:
 - Klotz
 - Berlin
 
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/604286695/seiten-detail
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/604286695/seiten-detail
 ---
 ![](https://64.media.tumblr.com/tumblr_l2iwbiKtb51qbu6ttjpg" >}}![](https://64.media.tumblr.com/tumblr_l2iw3i4ERU1qbu6tt.jpg)
 

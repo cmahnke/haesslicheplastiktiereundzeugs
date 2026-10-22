@@ -4,7 +4,6 @@ title: Stockholm
 tags:
 - Tier
 - Stockholm
-tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/3858656013/httpgooglmapskcaj
 outputs:
 - html
 - iiif-manifest
@@ -12,6 +11,8 @@ resources:
 - src: "tumblr_li294txAhM1qbfzcmo1_1280.jpg"
   name: front
 - src: "tumblr_li294txAhM1qbfzcmo2_1280.jpg"
+params:
+  tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/3858656013/httpgooglmapskcaj
 ---
 {{< figure src="tumblr_li294txAhM1qbfzcmo1_1280.jpg" >}}
 {{< figure src="tumblr_li294txAhM1qbfzcmo2_1280.jpg" >}}
