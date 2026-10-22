@@ -9,6 +9,8 @@ rssLimit = 25
 enableGitInfo = true
 theme = "projektemacher-base"
 
+enableRobotsTXT = true
+
 [markup.goldmark]
     [markup.goldmark.renderer]
         unsafe= true
@@ -76,3 +78,6 @@ theme = "projektemacher-base"
 
 [build]
   writeStats = true
+
+[params.robots]
+  llmsTXT = true

@@ -35,6 +35,7 @@
 
      {{ hugo.Generator }}
      {{- partial "metadata/schema.org/schema.org.html" . -}}
+    {{- partialCached "html/head/webmention.html" . "webmentions" -}}
   </head>
 
      {{ $class := "" }}
