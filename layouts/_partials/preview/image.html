@@ -7,7 +7,7 @@
 */}}
 {{- $previewImg := "" -}}
 {{- if isset site.Params "preview" -}}
-    {{- $previewImgPrefix := printf "%s.%s%s" site.Params.preview.outputPrefix site.Language.Lang site.Params.preview.outputSuffix -}}
+    {{- $previewImgPrefix := printf "%s.%s%s" site.Params.preview.outputPrefix site.Language.Name site.Params.preview.outputSuffix -}}
     {{- $previewImg = (.context.Resources.ByType "image").GetMatch $previewImgPrefix -}}
 {{- end -}}
 {{- return $previewImg -}}
