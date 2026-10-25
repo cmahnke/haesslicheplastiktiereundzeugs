@@ -18,7 +18,7 @@
       {{- else if (eq $orientation 6) -}}
           {{- $rotateOpts = "r270" -}}
       {{- end -}}
-      {{- if eq .MediaType.SubType "jpeg" -}}
+      {{- if in (slice "jpeg" "png" "tiff" "bmp") .MediaType.SubType -}}
         {{- with .Resize (printf "%dx webp %s" $defaultWidth $rotateOpts) -}}
           {{- $src = .RelPermalink -}}
         {{- end -}}
