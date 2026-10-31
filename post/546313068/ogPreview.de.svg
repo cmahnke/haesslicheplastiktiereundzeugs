@@ -1,0 +1,11 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" version="1.1" id="svg8">
+    <ns0:defs id="defs2">
+        <ns0:rect id="textbox" x="60" y="555" width="1080" height="70" />
+    </ns0:defs>
+    
+    <ns0:rect id="background" width="1200" height="630" x="0" y="0" style="fill:#ffffff" />
+    <ns0:text id="site-title" x="60" y="90" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.2;font-family:Georgia,'Libre Baskerville',serif;fill:#000000;fill-opacity:1;stroke:none">H&#228;ssliche Plastiktiere und Zeugs</ns0:text>
+    <ns0:image id="preview-image" ns1:href="./tumblr_l1efb8xZYT1qbfzcmo1_1280.jpg" y="130" x="457.5" style="image-rendering:optimizeQuality" preserveAspectRatio="xMidYMid meet" height="380" width="285.0" />
+    <ns0:line id="title-rule" x1="60" y1="540" x2="1140" y2="540" style="stroke:#000000;stroke-width:2" />
+    <ns0:text id="text-container" xml:space="preserve" style="shape-inside:url(#textbox);font-style:normal;font-weight:normal;font-size:56px;line-height:1.25;font-family:Georgia,'Libre Baskerville',serif;text-align:center;white-space:pre;fill:#000000;fill-opacity:1;stroke:none" />
+</ns0:svg>
