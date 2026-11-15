@@ -30,7 +30,7 @@
      {{ end }}
 
      {{ $tumblrStyle := resources.Get "css/tumblr.css" }}
-     {{ $options := (dict "targetPath" "base.css" "outputStyle" "compressed") }}
+     {{ $options := (dict "targetPath" "base.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
      {{ $ourTemplate := resources.Get "scss/base.scss" }}
      {{ $ourStyle := $ourTemplate | resources.ExecuteAsTemplate "scss/base.scss" . | toCSS $options }}
      {{ $style := slice $tumblrStyle $ourStyle | resources.Concat "css/concated.css" | minify | fingerprint }}
