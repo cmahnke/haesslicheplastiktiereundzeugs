@@ -1,4 +1,5 @@
 ---
+title: Münchner Löwenparade
 date: 2011-04-11T21:19:00Z
 tags:
 - München

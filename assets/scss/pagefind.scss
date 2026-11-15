@@ -1,0 +1,146 @@
+@use "pagefind/ui" as *;
+
+:root {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #333;
+  --pagefind-ui-text: #333;
+  --pagefind-ui-background: #fff;
+  --pagefind-ui-border: #595959;
+  --pagefind-ui-tag: #333;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 0.5em;
+  --pagefind-ui-image-border-radius: 0.5em;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: "Lora Variable", georgia, serif;
+}
+
+.post.search {
+  mark {
+    background-color: #fff882;
+    color: #444;
+  }
+
+  .search-box-container {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+
+    .search-input {
+      border: 1px solid #595959;
+      border-right-width: 0;
+      font-size: inherit;
+      line-height: unset;
+      width: 50%;
+
+      @media (max-width: 740px) {
+        width: 60%;
+      }
+    }
+
+    .search-button {
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid #595959;
+      color: inherit;
+      display: inline-flex;
+      font-size: inherit;
+      height: 2em;
+      line-height: unset;
+      padding: 0 0.8em;
+    }
+  }
+
+  .search-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-top: 1rem;
+    min-height: 6em;
+
+    @media (max-width: 740px) {
+      flex-direction: column;
+    }
+
+    .search-filter {
+      max-width: 30%;
+
+      @media (max-width: 740px) {
+        max-width: unset;
+      }
+
+      .search-filter-single {
+        border: 1px solid #595959;
+        /* Fieldsets default to min-width: min-content, which lets the
+           non-wrapping Pagefind pill row stretch the fieldset far beyond
+           its container. */
+        min-width: 0;
+        margin-top: 1.6rem;
+        padding: 0.8rem;
+
+        &:not(:has(.pagefind-modular-filter-pill)) {
+          display: none;
+        }
+
+        legend {
+          font-size: larger;
+          padding: 0 0.4rem;
+        }
+      }
+
+      .pagefind-modular-filter-pills-wrapper {
+        overflow-x: auto;
+      }
+
+      .pagefind-modular-filter-pills {
+        flex-wrap: wrap;
+      }
+
+      .pagefind-modular-filter-pill {
+        background-color: transparent;
+        border: 1px solid #595959;
+        border-radius: 0.5em;
+        color: inherit;
+
+        &:has(span[data-filter-count="0"]) {
+          display: none;
+          opacity: 0;
+        }
+      }
+    }
+
+    .search-result-container {
+      padding-left: 0.4rem;
+
+      .pagefind-modular-list-result {
+        padding: 1rem 0;
+
+        .pagefind-modular-list-thumb {
+          width: 200px;
+        }
+
+        .pagefind-modular-list-title {
+          font-size: larger;
+
+          .pagefind-modular-list-link {
+            &::before,
+            &::after {
+              content: unset !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Hidden title element (data-pagefind-meta="title", see
+   layouts/_partials/page.html) — visually hidden instead of display:none,
+   which Pagefind would skip */
+.pagefind-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}

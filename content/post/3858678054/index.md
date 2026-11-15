@@ -1,4 +1,5 @@
 ---
+title: Hans Hummel
 date: 2010-09-07T20:53:00Z
 tags:
 - Tier

@@ -1,4 +1,5 @@
 ---
+title: Elefantenparade
 date: 2009-10-05T16:33:00Z
 tags:
 - Tier

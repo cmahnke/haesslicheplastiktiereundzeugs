@@ -1,4 +1,5 @@
 ---
+title: Buddy Bär
 date: 2010-06-25T15:40:00Z
 tags:
 - Tier

@@ -1,4 +1,5 @@
 ---
+title: Hein Mück
 date: 2011-12-26T15:47:00Z
 tags:
 - Bremerhaven

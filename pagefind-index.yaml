@@ -1,0 +1,48 @@
+files:
+  output: docs/index
+  source: docs
+  include:
+    - '**/*.htm'
+    - '**/*.html'
+  exclude:
+    - 'search/**'
+    - 'tags/**'
+    - 'categories/**'
+    - 'page/**'
+    - 'meta/**'
+    - 'privacy/**'
+    - '404.html'
+
+content:
+  ignore:
+    - "<meta http-equiv=\"refresh\" content=\"0; url="
+
+index:
+# Index body of the pages: the site template renders the page content
+# inside 'div#main', header and footer live outside of it
+  body:
+    - '#main'
+  ignore:
+    - script: all
+
+# Index fields
+  meta:
+    author: 'meta[name="author"]'
+    title:
+      - '[data-pagefind-meta="title"]'
+    date:
+      - ".permalink time": "[datetime]"
+    selector:
+      - "p, h1":
+          function: generate_css_selector
+    image:
+      - "figure img": "[src]"
+  sort:
+    date:
+      - ".permalink time": "[datetime]"
+  filter:
+    tag:
+      - ".tags a":
+          function: extract
+          args:
+            pattern: "s/#(.*)/$1/g"

@@ -76,8 +76,16 @@ enableRobotsTXT = true
         weight = 2
         url = "about/"
 
+    [[menu.main]]
+        name = "Suche"
+        weight = 3
+        url = "search/"
+
 [build]
   writeStats = true
 
 [params.robots]
   llmsTXT = true
+
+[params.webMcpSearch]
+  enabled = true

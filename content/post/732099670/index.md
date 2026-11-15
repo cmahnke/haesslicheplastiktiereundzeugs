@@ -1,4 +1,5 @@
 ---
+title: Buddy Bär
 date: 2010-06-24T11:23:00Z
 tags:
 - Zeug

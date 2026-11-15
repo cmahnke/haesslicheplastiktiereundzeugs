@@ -1,4 +1,5 @@
 ---
+title: Münchner Löwenparade
 date: 2011-10-10T12:37:00Z
 tags:
 - Tier

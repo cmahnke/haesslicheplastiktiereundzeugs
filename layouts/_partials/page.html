@@ -18,6 +18,7 @@
       {{- end -}}
   </span>
   <div class="realpost"><div>
+    {{- with .Title -}}<span class="pagefind-title" data-pagefind-meta="title">{{ . }}</span>{{- end -}}
     {{ .Content }}
   </div>
     {{- if isset .Params "tags" -}}

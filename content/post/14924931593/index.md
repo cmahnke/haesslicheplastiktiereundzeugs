@@ -1,4 +1,5 @@
 ---
+title: Münchner Löwenparade
 date: 2011-10-10T12:38:00Z
 tags:
 - München Flughafen

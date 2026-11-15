@@ -1,4 +1,5 @@
 ---
+title: Buddy Bär
 date: 2010-05-13T17:20:00Z
 tags:
 - Berlin

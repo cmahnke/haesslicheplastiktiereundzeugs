@@ -1,4 +1,5 @@
 ---
+title: Buddy Bär
 date: 2010-05-15T17:17:47Z
 tags:
 - Klotz

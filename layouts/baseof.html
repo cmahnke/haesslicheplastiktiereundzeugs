@@ -12,6 +12,12 @@
     <meta name="description" content="{{ .Description | default (.Summary | default site.Params.description ) }}">
     <meta name="keywords" content="{{ (delimit .Keywords ",") | default site.Params.keywords }}">
 
+    {{- $webmcpSearch := site.Params.webMcpSearch -}}
+    {{- if and (reflect.IsMap $webmcpSearch) $webmcpSearch.enabled -}}
+      <meta name="webmcp-search-bundle-path" content="{{ $webmcpSearch.bundlePath | default (absURL "index/") }}">
+      <meta name="webmcp-search-title" content="{{ i18n "Search" }}">
+    {{- end -}}
+
     {{ partialCached "html/head/build-time.html" . }}
 
     {{ if .Permalink }}
@@ -56,5 +62,24 @@
              {{ partial "footer.html" . }}
          </div>
        </div>
+
+     {{- $webmcpSearch := site.Params.webMcpSearch -}}
+     {{- $opts := dict "targetPath" "js/search.js" "format" "esm" "minify" false -}}
+     {{- $js := slice -}}
+     {{- if and (reflect.IsMap $webmcpSearch) $webmcpSearch.enabled -}}
+         {{- $js = $js | append (resources.Get "ts/webmcp-search.ts" | js.Build $opts) -}}
+     {{- end -}}
+     {{- with .Page.Params.js -}}
+         {{- $js = $js | append (resources.Get . | js.Build $opts) -}}
+     {{- end -}}
+     {{- if gt (len $js) 0 -}}
+         {{- $concatFileId := delimit $js "" | sha256 -}}
+         {{- if eq hugo.Environment "production" -}}
+             {{- $js = $js | resources.Concat (printf "js/concated-%s.js" $concatFileId) | minify | fingerprint -}}
+         {{- else -}}
+             {{- $js = $js | resources.Concat (printf "js/concated-%s.js" $concatFileId) | fingerprint -}}
+         {{- end -}}
+         <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" type="module"></script>
+     {{- end -}}
    </body>
  </html>
