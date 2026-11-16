@@ -11,6 +11,9 @@ theme = "projektemacher-base"
 
 enableRobotsTXT = true
 
+[params.iiif]
+  defaultBehavior = "individuals"
+
 [markup.goldmark]
     [markup.goldmark.renderer]
         unsafe= true
