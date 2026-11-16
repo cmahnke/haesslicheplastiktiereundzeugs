@@ -5,8 +5,12 @@ tags:
 - Klotz
 - Berlin
 
+resources:
+- src: "tumblr_l2hdoem8KH1qbu6tt.jpg"
+  name: front
+- src: "tumblr_l2hdotNaJm1qbu6tt.jpg"
 params:
   tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/601854459
 ---
-![](https://64.media.tumblr.com/tumblr_l2hdoem8KH1qbu6ttjpg" >}}![](https://64.media.tumblr.com/tumblr_l2hdotNaJm1qbu6tt.jpg)
-
+{{< figure src="tumblr_l2hdoem8KH1qbu6tt.jpg" >}}
+{{< figure src="tumblr_l2hdotNaJm1qbu6tt.jpg" >}}
