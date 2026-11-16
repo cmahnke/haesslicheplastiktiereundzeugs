@@ -1,4 +1,5 @@
 ---
+title: Tschernobyl-Plakat
 date: 2010-04-23T20:16:00Z
 tags:
 - Zeug

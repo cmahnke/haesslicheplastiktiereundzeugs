@@ -1,4 +1,5 @@
 ---
+title: Eselparade
 date: 2009-08-20T15:01:00Z
 tags:
 - Tier

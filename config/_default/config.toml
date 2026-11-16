@@ -1,28 +1,31 @@
 [params]
-    linkTumblr = true
-    keywords = "Tierparaden, Stadtmöbel"
-    description = "Fotodokumentaion über Tierparaden"
-    schemaPerson = "https://christianmahnke.de/person.jsonld"
+  linkTumblr = true
+  keywords = "Tierparaden, Stadtmöbel"
+  description = "Fotodokumentaion über Tierparaden"
+  schemaPerson = "https://christianmahnke.de/person.jsonld"
 
-    [params.footer]
-        privacy = true
+[params.iiif]
+  defaultBehavior = "individuals"
 
-    [params.preview]
-        outputPrefix = "ogPreview"
-        outputSuffix = ".png"
-        format = "svg"
-        source = "post"
+[params.footer]
+  privacy = true
 
-        [params.preview.size]
-            height = 630
-            width = 1200
+[params.preview]
+  outputPrefix = "ogPreview"
+  outputSuffix = ".png"
+  format = "svg"
+  source = "post"
 
-        [params.preview.svg]
-            template = "./Source Files/Other/preview-template.svg"
-            scale = "width"
-            removeMissing = true
+[params.preview.size]
+  height = 630
+  width = 1200
+
+[params.preview.svg]
+  template = "./Source Files/Other/preview-template.svg"
+  scale = "width"
+  removeMissing = true
 
 [params.author]
-    email = 'mail@christianmahnke.de'
-    name = 'Christian Mahnke'
-    uri = 'http://www.wikidata.org/entity/Q137668638'
+  email = 'mail@christianmahnke.de'
+  name = 'Christian Mahnke'
+  uri = 'http://www.wikidata.org/entity/Q137668638'

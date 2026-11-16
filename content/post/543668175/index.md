@@ -1,4 +1,5 @@
 ---
+title: WISSEN-Magazin
 date: 2010-04-23T21:09:00Z
 tags:
 - Zeug

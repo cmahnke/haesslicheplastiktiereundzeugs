@@ -1,4 +1,5 @@
 ---
+title: Löwe im Smoking
 date: 2010-09-14T19:43:00Z
 tags:
 - Tier

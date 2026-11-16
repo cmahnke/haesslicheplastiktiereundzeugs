@@ -1,4 +1,5 @@
 ---
+title: Esoterik-Regal
 date: 2010-04-03T14:48:00Z
 tags:
 - Zeug

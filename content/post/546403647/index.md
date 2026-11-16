@@ -1,4 +1,5 @@
 ---
+title: Formieren statt konsumieren
 date: 2009-09-13T11:32:00Z
 tags:
 - Zeug

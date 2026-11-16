@@ -1,4 +1,5 @@
 ---
+title: Alte Fotografie mit Notizen
 date: 2009-08-07T18:32:00Z
 tags:
 - Zeug

@@ -1,4 +1,5 @@
 ---
+title: Eselparade
 date: 2010-05-23T19:24:00Z
 tags:
 - Hardegsen
