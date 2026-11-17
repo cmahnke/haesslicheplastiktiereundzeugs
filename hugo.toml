@@ -52,6 +52,9 @@ enableRobotsTXT = true
 [mediaTypes."application/ld+json"]
     suffixes = ["json"]
 
+[mediaTypes."application/geo+json"]
+    suffixes = ["geojson"]
+
 [outputFormats.iiif-manifest]
     mediaType = "application/ld+json"
     baseName = "manifest"
@@ -61,6 +64,11 @@ enableRobotsTXT = true
 [outputFormats.iiif-collection]
     mediaType = "application/ld+json"
     baseName = "collection"
+    isPlainText = true
+    isHTML = false
+
+[outputFormats.geojson]
+    mediaType = "application/geo+json"
     isPlainText = true
     isHTML = false
 

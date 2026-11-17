@@ -10,6 +10,9 @@ resources:
   name: front
 - src: "tumblr_l2ipmdBJx91qbu6tt.jpg"
 params:
+  geojson:
+    type: Point
+    coordinates: [13.3951309, 52.5173885]
   tumblr_url: https://haesslicheplastiktiereundzeugs.tumblr.com/post/603908663
 ---
 {{< figure src="tumblr_l2iplvmzzK1qbu6tt.jpg" >}}
